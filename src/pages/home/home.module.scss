@@ -1,5 +1,6 @@
 .homeContainer {
   height: 100%;
+  overflow-y: hidden;
 
   .searchContainer {
     width: 70%;
@@ -11,6 +12,7 @@
     display: flex;
     max-width: 1050px;
     margin: 0 auto 2rem;
+    height: 70%;
   }
 }
 

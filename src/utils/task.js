@@ -38,6 +38,23 @@ export const deleteTask = (taskId) => {
   localStorage.setItem("tasks", JSON.stringify(newTaskList));
 };
 
+export const deleteManyTask = (tasks) => {
+  const taskMap = {};
+
+  for (let i = 0; i < tasks.length; ++i) {
+    const task = tasks[i];
+    taskMap[task.id] = task;
+  }
+
+  const taskList = getTask();
+
+  const updatedTaskList = taskList.filter((task) => {
+    return !taskMap[task.id];
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(updatedTaskList));
+};
+
 export const updateTask = (taskId, updatedData) => {
   const taskList = getTask();
   const newTaskList = taskList.map((task) => {
@@ -49,4 +66,25 @@ export const updateTask = (taskId, updatedData) => {
   });
 
   localStorage.setItem("tasks", JSON.stringify(newTaskList));
+};
+
+export const updateManyTask = (updateTaskList) => {
+  const taskMap = {};
+
+  for (let i = 0; i < updateTaskList.length; ++i) {
+    const task = updateTaskList[i];
+    taskMap[task.id] = task;
+  }
+
+  const taskList = getTask();
+
+  const updatedTaskList = taskList.map((task) => {
+    if (taskMap[task.id]) {
+      return taskMap[task.id];
+    }
+
+    return task;
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(updatedTaskList));
 };

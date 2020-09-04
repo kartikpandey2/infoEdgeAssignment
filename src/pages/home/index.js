@@ -2,7 +2,13 @@ import React, { useState } from "react";
 import { AutoComplete, Tag } from "antd";
 import TaskTray from "../../components/taskTray";
 import TaskCard from "../../components/taskCard";
-import { getTask, deleteTask, updateTask } from "../../utils/task";
+import {
+  getTask,
+  deleteTask,
+  updateTask,
+  deleteManyTask,
+  updateManyTask,
+} from "../../utils/task";
 import styles from "./home.module.scss";
 
 const allTaskTray = [
@@ -86,6 +92,17 @@ const Home = () => {
     updateAutoCompleteOptions(filterAutoCompleteOptions);
   };
 
+  const deleteAll = (tasks) => {
+    deleteManyTask(tasks);
+    updateTaskList(getTask());
+  };
+
+  const updateManyTaskStatus = (tasks, status) => {
+    const updatedTaskList = tasks.map((task) => ({ ...task, status }));
+    updateManyTask(updatedTaskList);
+    updateTaskList(getTask());
+  };
+
   const taskObj = {
     todoTask: [],
     completedTask: [],
@@ -97,7 +114,10 @@ const Home = () => {
 
     if (task.status === "COMPLETED") {
       taskObj.completedTask.push(task);
-    } else if (task.status === "OPEN" && Date.now() > task.dueDate) {
+    } else if (
+      task.status === "OPEN" &&
+      new Date().setHours(0, 0, 0, 0) > task.dueDate
+    ) {
       taskObj.dueTask.push(task);
     } else {
       taskObj.todoTask.push(task);
@@ -136,6 +156,8 @@ const Home = () => {
               name={taskTray.name}
               showOptions={taskTray.showOptions}
               key={index}
+              deleteAll={() => deleteAll(tasks)}
+              updateMany={(status) => updateManyTaskStatus(tasks, status)}
             >
               {tasks.map((task) => (
                 <TaskCard

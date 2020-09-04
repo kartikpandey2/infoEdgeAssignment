@@ -3,27 +3,21 @@ import { Link } from "react-router-dom";
 import { Menu, Dropdown } from "antd";
 import styles from "./taskTray.module.scss";
 
-const menu = (
-  <Menu>
-    <Menu.Item>
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="http://www.taobao.com/"
-      >
-        Mark All Complete
-      </a>
-    </Menu.Item>
-    <Menu.Divider />
-    <Menu.Item>
-      <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">
-        Delete All
-      </a>
-    </Menu.Item>
-  </Menu>
-);
-
 const TaskTray = (props) => {
+  const { deleteAll, updateMany } = props;
+
+  const menu = (
+    <Menu>
+      <Menu.Item>
+        <div onClick={() => updateMany("COMPLETED")}>Mark All Complete</div>
+      </Menu.Item>
+      <Menu.Divider />
+      <Menu.Item>
+        <div onClick={deleteAll}>Delete All</div>
+      </Menu.Item>
+    </Menu>
+  );
+
   return (
     <div className={styles.taskTrayContainer}>
       <div className={styles.headingContainer}>
