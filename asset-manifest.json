@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/infoEdgeAssignment/static/css/main.d5227663.chunk.css",
+    "main.css": "/infoEdgeAssignment/static/css/main.d31ce6c1.chunk.css",
     "main.js": "/infoEdgeAssignment/static/js/main.8d18fa72.chunk.js",
     "main.js.map": "/infoEdgeAssignment/static/js/main.8d18fa72.chunk.js.map",
     "runtime-main.js": "/infoEdgeAssignment/static/js/runtime-main.59474704.js",
@@ -9,17 +9,17 @@
     "static/js/2.b763baf3.chunk.js": "/infoEdgeAssignment/static/js/2.b763baf3.chunk.js",
     "static/js/2.b763baf3.chunk.js.map": "/infoEdgeAssignment/static/js/2.b763baf3.chunk.js.map",
     "index.html": "/infoEdgeAssignment/index.html",
-    "precache-manifest.713fbd5aef490ee4711c5df36ca42777.js": "/infoEdgeAssignment/precache-manifest.713fbd5aef490ee4711c5df36ca42777.js",
+    "precache-manifest.96c7988c8167e9c1a0e8be7d02f42ded.js": "/infoEdgeAssignment/precache-manifest.96c7988c8167e9c1a0e8be7d02f42ded.js",
     "service-worker.js": "/infoEdgeAssignment/service-worker.js",
     "static/css/2.d4e7eff5.chunk.css.map": "/infoEdgeAssignment/static/css/2.d4e7eff5.chunk.css.map",
-    "static/css/main.d5227663.chunk.css.map": "/infoEdgeAssignment/static/css/main.d5227663.chunk.css.map",
+    "static/css/main.d31ce6c1.chunk.css.map": "/infoEdgeAssignment/static/css/main.d31ce6c1.chunk.css.map",
     "static/js/2.b763baf3.chunk.js.LICENSE.txt": "/infoEdgeAssignment/static/js/2.b763baf3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.59474704.js",
     "static/css/2.d4e7eff5.chunk.css",
     "static/js/2.b763baf3.chunk.js",
-    "static/css/main.d5227663.chunk.css",
+    "static/css/main.d31ce6c1.chunk.css",
     "static/js/main.8d18fa72.chunk.js"
   ]
 }
