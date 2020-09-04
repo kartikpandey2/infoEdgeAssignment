@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab5c91fe5d757ef4b62121ff5bf77043",
+    "revision": "686d51dde3c0c5e708c8e84d0c7b55d4",
     "url": "/infoEdgeAssignment/index.html"
   },
   {
-    "revision": "16f5a4bc1354a4932f13",
+    "revision": "f330968680b726b08bf2",
     "url": "/infoEdgeAssignment/static/css/2.d4e7eff5.chunk.css"
   },
   {
-    "revision": "93715bcd314873c587e7",
+    "revision": "2d904b7b87401d710f86",
     "url": "/infoEdgeAssignment/static/css/main.d42bc441.chunk.css"
   },
   {
-    "revision": "16f5a4bc1354a4932f13",
-    "url": "/infoEdgeAssignment/static/js/2.a8c0c70c.chunk.js"
+    "revision": "f330968680b726b08bf2",
+    "url": "/infoEdgeAssignment/static/js/2.52f5babe.chunk.js"
   },
   {
     "revision": "e4f6fd5e687738d725e56603861f1923",
-    "url": "/infoEdgeAssignment/static/js/2.a8c0c70c.chunk.js.LICENSE.txt"
+    "url": "/infoEdgeAssignment/static/js/2.52f5babe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "93715bcd314873c587e7",
-    "url": "/infoEdgeAssignment/static/js/main.7004cca9.chunk.js"
+    "revision": "2d904b7b87401d710f86",
+    "url": "/infoEdgeAssignment/static/js/main.52cf1a82.chunk.js"
   },
   {
     "revision": "ac9c4b064fd6f6f02f7a",
