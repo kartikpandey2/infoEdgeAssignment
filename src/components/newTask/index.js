@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import moment from "moment";
-import { notification, Select, DatePicker, Input } from "antd";
+import { notification, Select, DatePicker, Input, message } from "antd";
 import Button from "../button";
 import { addTask, updateTask } from "../../utils/task";
 import styles from "./newTask.module.scss";
@@ -72,7 +72,7 @@ class NewTask extends Component {
       showNotification("Task Added");
       this.props.onAdd();
     } else {
-      console.log(isValidData.err);
+      message.error(isValidData.err);
     }
   };
 
@@ -93,7 +93,7 @@ class NewTask extends Component {
       showNotification("Task Updated");
       this.props.onUpdate();
     } else {
-      console.log(isValidData.err);
+      message.error(isValidData.err);
     }
   };
 

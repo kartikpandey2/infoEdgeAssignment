@@ -49,7 +49,7 @@ const renderItem = (task) => {
   }
 
   return {
-    value: task.name,
+    value: task.id,
     label: (
       <div className={styles.itemsContainer}>
         <div className={styles.itemRow}>
@@ -62,7 +62,7 @@ const renderItem = (task) => {
   };
 };
 
-const Home = () => {
+const Home = (props) => {
   const [taskList, updateTaskList] = useState(getTask());
   const [autoCompleteOptions, updateAutoCompleteOptions] = useState(getTask());
 
@@ -90,6 +90,10 @@ const Home = () => {
     );
 
     updateAutoCompleteOptions(filterAutoCompleteOptions);
+  };
+
+  const onSelect = (value) => {
+    props.history.push(`/${value}`);
   };
 
   const deleteAll = (tasks) => {
@@ -139,6 +143,7 @@ const Home = () => {
       <div className={styles.searchContainer}>
         <AutoComplete
           onSearch={onSearch}
+          onSelect={onSelect}
           options={autoCompleteOptions.map((task) => renderItem(task))}
           style={{
             width: "100%",
