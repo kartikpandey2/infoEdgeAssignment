@@ -1,0 +1,44 @@
+.taskCardContainer {
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  padding-top: 0;
+
+  .dueTaskHighliterContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .dueTaskHighliter {
+      display: inline-block;
+      height: 8px;
+      width: 25px;
+      border-radius: 5px;
+      margin-right: 2px;
+    }
+  }
+
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .taskTitle {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      width: 80%;
+    }
+  }
+
+  .description {
+    font-size: 0.8rem;
+    color: #586069;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80%;
+  }
+}

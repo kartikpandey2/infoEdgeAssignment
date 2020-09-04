@@ -1,0 +1,29 @@
+.taskTrayContainer {
+  background-color: #e5eff4;
+  border-radius: 10px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 0 1rem;
+
+  .headingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.3rem;
+
+    .heading {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    overflow-y: scroll;
+  }
+}

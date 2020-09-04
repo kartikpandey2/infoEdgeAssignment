@@ -1,0 +1,63 @@
+.homeContainer {
+  height: 100%;
+
+  .searchContainer {
+    width: 70%;
+    max-width: 500px;
+    margin: 3rem auto;
+  }
+
+  .trayContainer {
+    display: flex;
+    max-width: 1050px;
+    margin: 0 auto 2rem;
+  }
+}
+
+.itemsContainer {
+  .itemRow {
+    display: flex;
+    justify-content: space-between;
+
+    .itemName {
+      font-size: 0.9rem;
+      font-weight: bold;
+      width: 70%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .itemDescription {
+    font-size: 0.7rem;
+    color: #586069;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .homeContainer {
+    overflow-x: scroll;
+
+    .trayContainer {
+      overflow-x: scroll;
+      display: inline-flex;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .homeContainer {
+    .searchContainer {
+      margin: 3rem 1rem;
+      position: fixed;
+    }
+
+    .trayContainer {
+      margin: 7rem auto 2rem;
+    }
+  }
+}

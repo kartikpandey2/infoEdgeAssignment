@@ -1,0 +1,43 @@
+.newTaskContainer {
+  padding: 20px 30px;
+  width: 550px;
+  box-sizing: border-box;
+  background: #e5eff4;
+  border-radius: 10px;
+
+  .inputContainer {
+    margin-bottom: 1rem;
+
+    .label {
+      display: block;
+      margin-bottom: 10px;
+      color: #9d9cb5;
+    }
+
+    .input {
+      border: 0px;
+      width: 100%;
+      border-bottom: 1px solid #9d9cb5;
+      font-size: 1rem;
+      background: transparent;
+    }
+
+    .input:focus {
+      outline: unset;
+    }
+
+    .textarea {
+      width: 100%;
+      font-size: 1rem;
+      background: transparent;
+      border-color: #9d9cb5;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .newTaskContainer {
+    width: 70%;
+    min-width: 300px;
+  }
+}
